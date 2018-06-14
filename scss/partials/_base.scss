@@ -1,0 +1,117 @@
+$font-basic: Helvetica, Arial;
+$mobile: "(max-width: 500px)";
+
+/* -----------*/
+/*COLORS      */
+$header-blue: #283593;
+$h4-color: #283593;
+$bg-white: #fff;
+$body-color: #fafafa;
+$grey: #888;
+$success-green: #01bb9c;
+
+
+
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+  	font-family: $font-basic;
+  	font-size: 16px;
+}
+
+.bg-img{
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/login-bg.jpg');
+	background-size: cover;
+}
+
+input[type="submit"] {
+	border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.container{
+	width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    &.row{
+    	flex-flow: row wrap;
+    	&.right{
+        	justify-content: flex-end;
+	    }
+	    &.left{
+	        justify-content: flex-start;
+	    }
+    }
+    &.column{
+    	flex-flow: column wrap;
+    }
+}
+
+.check {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+  
+  input {
+    display: none;
+    &:checked + .box {
+      background-color: transparent;
+      border: 2px solid $success-green;
+      
+      &:after {
+        top: 0;
+      }
+    }
+  }
+  
+  .box {
+    width: 100%;
+    height: 100%;
+    transition: all 320ms cubic-bezier(.19,1,.22,1);
+    border: 2px solid lighten(black, 75%);
+    border-radius: 3px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:after {
+      width: 50%;
+      height: 20%;
+      content: '';
+      position: absolute;
+      border-left: 3px solid;
+      border-bottom: 3px solid;
+      border-color: $success-green;
+      transform: rotate(-45deg) translate3d(0,0,0);
+      transform-origin: center center;
+      transition: all 320ms cubic-bezier(.19,1,.22,1);
+      left: 0;
+      right: 0;
+      top: 200%;
+      bottom: 5%;
+      margin: auto;
+    }
+  }
+}
+
+
+@media #{$mobile} {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}

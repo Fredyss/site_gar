@@ -1,0 +1,64 @@
+$dark-blue: #161a1a;
+$body-color: #fafafa;
+
+
+header {
+    height: 65px;
+    width: 100%;
+    background-color: $header-blue;
+    border-top: 2px solid $dark-blue;
+    color: #fff;
+
+    @include box-shadow(0, 2px, 8px, rgba(0,0,0,.3), false);
+    .container {
+        max-height: 65px;
+    }
+
+    .page-title{
+        font-size: 1.2em;
+        font-weight: normal;
+        margin: 0;
+        padding-bottom: 2px;
+    }
+
+    .nav-left{
+        flex-grow: 1;
+
+        a#sidebar-toggle{
+            display: block;
+            padding-top: 5px;
+            img{
+                padding: 20px;
+            }
+        }
+        .page-title{
+            font-size: 1.2em;
+            font-weight: normal;
+            margin: 0;
+            padding-bottom: 2px;
+        }
+    }
+
+    .nav-right{
+        flex-grow: 1;
+        font-size: .8em;
+        a#logout-btn{
+            padding: 0 20px;
+        }
+        h4.page-title{
+            padding-right: 20px;
+            font-size: .9em;
+            padding-bottom: .3em;
+          img {
+            padding-right: .5em;
+          }
+        }
+
+    }
+
+    h2 {
+        margin-right: 2%;
+        
+    }
+
+}

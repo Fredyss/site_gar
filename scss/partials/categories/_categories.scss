@@ -1,0 +1,65 @@
+
+
+main {
+  background-color: $body-color;
+  padding-top: 1.5em;
+  min-height: 100vh;
+  display: flex;
+  margin: auto;
+  justify-content: flex-start;
+}
+
+#content {
+  width: 100%;
+  padding: 15px;
+  background-color: $bg-white;
+  margin: 0 10px 10px 0;
+  @include box-shadow(0, 2px, 8px, rgba(0, 0, 0, .3), false);
+}
+
+.categories-list {
+  h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      font-size: .8em;
+      color: $h4-color;
+      margin-left:  65%;
+      &:before {
+        content: url("../img/svg/round-refresh-24px.svg");
+        padding-right: 5px;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x:auto;
+    tbody {
+      tr {
+        th, td {
+          font-size: .8em;
+          color: $grey;
+          min-width: 60px;
+          position: relative;
+          text-align: left;
+          border: none;
+          border-bottom: 1px solid lighten(black, 85%);
+          padding: 10px 40px;
+
+          &:nth-child(3),&:nth-child(4) {
+            color: $blue;
+          }
+          &:nth-child(3){
+            padding: 0 8em 0 0;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+
+

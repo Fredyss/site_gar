@@ -1,0 +1,56 @@
+.sidebar {
+    width: 100%;
+    max-width: 64px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include animate(all, 320ms);
+
+    &.open{
+		max-width: 245px;
+    }
+
+    nav{
+        li{
+        	@include animate(all, 320ms);
+
+        	&:hover,
+        	&:focus{
+        		background-color: lighten(black, 95%);         
+        	}
+
+        	&:hover a,
+        	&:focus a{
+        		color: lighten(black, 20%);    
+        	}
+
+        	&:hover a img,
+        	&:focus a img{
+        		opacity: .8; 
+        	}
+            a{
+            	display: flex;
+            	align-items: center;
+            	padding: 15px 20px;
+            	text-decoration: none;
+            	font-size: .95em;
+            	color: lighten(black, 50%);
+            	@include animate(all, 320ms);
+
+                img{
+                    margin-top: -8px;
+                    padding-right: 20px;
+                    opacity: .5;
+                    min-width: 24px;
+                    @include animate(all, 320ms);
+                }
+                span{
+
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,75 @@
+
+main {
+
+  .gallery-heading {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    h1, h4 {
+      color: darken($grey, 30%);
+    }
+
+    h1 {
+      margin-right: 25%;
+
+    }
+
+    h4 {
+      color: $h4-color;
+      font-size: .8em;
+
+    }
+
+  }
+
+  input {
+    color: $grey;
+    margin-left: 80%;
+    margin-bottom: 1.4em;
+    border: none;
+    border-bottom: 1px solid $grey;
+    text-transform: capitalize;
+  }
+
+  .row-heading {
+    display: flex;
+    justify-content: flex-start;
+
+  }
+
+  .gallery-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .image-box {
+      margin: {
+        right: .3em;
+        bottom: .2em;
+      }
+    }
+
+    img {
+      width: 16.2em;
+
+    }
+
+  }
+
+}
+
+@media #{$mobile} {
+  margin: 0;
+  display: flex;
+
+
+  .gallery-heading {
+    flex-wrap: wrap;
+
+  }
+}
+
+
+
+
+
